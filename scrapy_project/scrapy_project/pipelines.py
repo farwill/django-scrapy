@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from quotes.models import Tag, Quote
+from quote_app.models import Tag, Quote
 from scrapy_project.items import QuoteItem
 # Define your item pipelines here
 #

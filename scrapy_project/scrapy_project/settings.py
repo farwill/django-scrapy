@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-# DJANGO INTEGRATION
-sys.path.append(os.path.dirname(os.path.abspath('.')))
-# Do not forget the change iCrawler part based on your project name
-os.environ['DJANGO_SETTINGS_MODULE'] = 'django_project.settings'
-
-# This is required only if Django Version > 1.8
 import django
+# DJANGO INTEGRATION
+sys.path.append(os.path.abspath('../django_project'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_project.settings'
 django.setup()
 # DJANGO INTEGRATION
 # Scrapy settings for scrapy_project project
@@ -74,9 +71,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrapy_project.pipelines.ScrapyProjectPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scrapy_project.pipelines.ScrapyProjectPipeline': 300,
+   'scrapy_project.pipelines.QuotePipeline': 350,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

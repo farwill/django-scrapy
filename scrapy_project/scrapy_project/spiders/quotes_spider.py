@@ -1,7 +1,7 @@
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst
-from tutorial.items import QuoteItem
+from scrapy_project.items import QuoteItem
 
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
