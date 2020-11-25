@@ -1,3 +1,3 @@
 scrapy 
-django==3.1.0
+django==3.0.11
 scrapy-djangoitem 
